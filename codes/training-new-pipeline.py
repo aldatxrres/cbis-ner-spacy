@@ -1,4 +1,8 @@
-("Sexo feminino, 73 anos, leucodérmica, com antecedentes pessoais conhecidos de hipertensão arterial, diabetes mellitus tipo 2 insulinotratada, dislipidemia e doença cerebrovascular. Doente negou alergias medicamentosas conhecidas.", {"entities": [(15, 22, "IDADE"), (24, 36, "DOENÇA"), (78, 98, "DOENÇA"), (100, 124, "DOENÇA"), (125, 140, "MEDICAMENTO"), (142, 154, "DOENÇA"), (157, 179, "DOENÇA")]}),
+import spacy
+from spacy.training import Example
+
+train_data = [
+    ("Sexo feminino, 73 anos, leucodérmica, com antecedentes pessoais conhecidos de hipertensão arterial, diabetes mellitus tipo 2 insulinotratada, dislipidemia e doença cerebrovascular. Doente negou alergias medicamentosas conhecidas.", {"entities": [(15, 22, "IDADE"), (24, 36, "DOENÇA"), (78, 98, "DOENÇA"), (100, 124, "DOENÇA"), (125, 140, "MEDICAMENTO"), (142, 154, "DOENÇA"), (157, 179, "DOENÇA")]}),
 ("Recorreu ao serviço de urgência por tosse produtiva com expectoração purulenta e febre (38,1ºC) com 5 dias de evolução.", {"entities": [(36, 41, "SINTOMA"), (56, 78, "SINTOMA"), (81, 86, "SINTOMA")]}),
 ("Analiticamente com aumento dos parâmetros inflamatórios e, radiologicamente, com condensação do lobo inferior esquerdo, a favorecer o diagnóstico de pneumonia adquirida na comunidade.", {"entities": [(19, 55, "SINTOMA"), (81, 118, "SINTOMA"), (149, 158, "DOENÇA")]}),
 ("Foi-lhe prescrita amoxicilina/ácido clavulânico, sendo a primeira administração por via endovenosa, no serviço de urgência.", {"entities": [(18, 29, "MEDICAMENTO"), (30, 47, "MEDICAMENTO"), (84, 98, "PROCEDIMENTO")]}),
@@ -13,3 +17,21 @@
 ("Foi admitida provável síndrome de Kounis tipo 2 em contexto de toma de amoxicilina/ácido clavulânico.", {"entities": [(22, 47, "DOENÇA"), (71, 82, "MEDICAMENTO"), (83, 100, "MEDICAMENTO")]}),
 ("Doente permaneceu 29 horas sob ventilação mecânica, com boa evolução clínica posterior.", {"entities": [(31, 50, "PROCEDIMENTO")]}),
 ("Teve alta com indicação para evitar antibióticos betalactâmicos e foi referenciada à consulta de imunoalergologia.", {"entities": [(36, 64, "MEDICAMENTO"), (97, 113, "ESPECIALIDADE")]})
+]
+
+nlp = spacy.blank("pt")
+ner = nlp.add_pipe("ner")
+
+for text, annotations in train_data:
+    for ent in annotations.get("entities"):
+        ner.add_label(ent[2])
+
+optimizer = nlp.begin_training()
+
+for itn in range(100):
+    for text, annotations in train_data:
+        doc = nlp.make_doc(text)
+        example = Example.from_dict(doc, annotations)
+        nlp.update([example], sgd=optimizer)
+
+nlp.to_disk("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\results")

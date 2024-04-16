@@ -14,5 +14,6 @@ Para as anotações, levamos em consideração as seguintes etiquetas:
     - SINTOMA
     - ESPECIALIDADE
     - REAÇÃO
+    - DIAGNÓSTICO
 
 
