@@ -11,16 +11,10 @@ colors = {
     "DIAGNÓSTICO": "linear-gradient(90deg, #851BE0, #E0806E)",
 }
 
-# Carregar o modelo treinado
 nlp = spacy.load("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\results")
 
-with open("c:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\Projeto spaCy\\cbis-ner-spacy\\clinical-reports\\cc_034.txt", encoding="utf-8") as file:
+with open("c:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\Projeto spaCy\\cbis-ner-spacy\\clinical-reports\\cc_037.txt", encoding="utf-8") as file:
     texto = file.read()
 
-# Processar o texto com o modelo treinado
 doc = nlp(texto)
 displacy.serve(doc, style='ent', page=True, options={"colors": colors})
-
-# Iterar sobre as entidades identificadas no texto
-# for entidade in doc.ents:
-#     print(entidade.text, entidade.label_)

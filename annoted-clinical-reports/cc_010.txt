@@ -1,4 +1,4 @@
-("Sexo feminino, 73 anos, leucodérmica, com antecedentes pessoais conhecidos de hipertensão arterial, diabetes mellitus tipo 2 insulinotratada, dislipidemia e doença cerebrovascular. Doente negou alergias medicamentosas conhecidas.", {"entities": [(15, 22, "IDADE"), (24, 36, "DOENÇA"), (78, 98, "DOENÇA"), (100, 124, "DOENÇA"), (125, 140, "MEDICAMENTO"), (142, 154, "DOENÇA"), (157, 179, "DOENÇA")]}),
+[("Sexo feminino, 73 anos, leucodérmica, com antecedentes pessoais conhecidos de hipertensão arterial, diabetes mellitus tipo 2 insulinotratada, dislipidemia e doença cerebrovascular. Doente negou alergias medicamentosas conhecidas.", {"entities": [(15, 22, "IDADE"), (24, 36, "DOENÇA"), (78, 98, "DOENÇA"), (100, 124, "DOENÇA"), (125, 140, "MEDICAMENTO"), (142, 154, "DOENÇA"), (157, 179, "DOENÇA")]}),
 ("Recorreu ao serviço de urgência por tosse produtiva com expectoração purulenta e febre (38,1ºC) com 5 dias de evolução.", {"entities": [(36, 41, "SINTOMA"), (56, 78, "SINTOMA"), (81, 86, "SINTOMA")]}),
 ("Analiticamente com aumento dos parâmetros inflamatórios e, radiologicamente, com condensação do lobo inferior esquerdo, a favorecer o diagnóstico de pneumonia adquirida na comunidade.", {"entities": [(19, 55, "SINTOMA"), (81, 118, "SINTOMA"), (149, 158, "DOENÇA")]}),
 ("Foi-lhe prescrita amoxicilina/ácido clavulânico, sendo a primeira administração por via endovenosa, no serviço de urgência.", {"entities": [(18, 29, "MEDICAMENTO"), (30, 47, "MEDICAMENTO"), (84, 98, "PROCEDIMENTO")]}),
@@ -12,4 +12,4 @@
 ("Doseamento da triptase nas primeiras 6 horas após o choque: 132ng/mL (fortemente positivo).", {"entities": [(14, 22, "MEDICAMENTO")]}),
 ("Foi admitida provável síndrome de Kounis tipo 2 em contexto de toma de amoxicilina/ácido clavulânico.", {"entities": [(22, 47, "DOENÇA"), (71, 82, "MEDICAMENTO"), (83, 100, "MEDICAMENTO")]}),
 ("Doente permaneceu 29 horas sob ventilação mecânica, com boa evolução clínica posterior.", {"entities": [(31, 50, "PROCEDIMENTO")]}),
-("Teve alta com indicação para evitar antibióticos betalactâmicos e foi referenciada à consulta de imunoalergologia.", {"entities": [(36, 64, "MEDICAMENTO"), (97, 113, "ESPECIALIDADE")]})
+("Teve alta com indicação para evitar antibióticos betalactâmicos e foi referenciada à consulta de imunoalergologia.", {"entities": [(36, 64, "MEDICAMENTO"), (97, 113, "ESPECIALIDADE")]})]

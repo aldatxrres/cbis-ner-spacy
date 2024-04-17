@@ -40,7 +40,6 @@ displacy.serve(doc, style='ent', page=True, options={"colors": colors})
 # Como os problemas foram resolvidos: instalei o IPython, importei o displacy (que resolve o problema de exibição gráfica) 
 
 # Sugestões:
-
 # fazer uma função que reconheça o final das palavras terminadas em (ite - inflamações, itis - inflamações, oma - tumores, ectomia - retirada de órgãos, ectasia - dilatação de órgãos, emia - sangue, lise - destruição, malácia - amolecimento, megalia - aumento, nefro - rim, nefrite - inflamação do rim, nefrose - doença do rim, nefrolitíase - cálculos renais, nefroma - tumor do rim, nefropatia - doença do rim, nefroscopia - exame do rim, nefrostomia - drenagem do rim, nefrotomia - incisão do rim, nefroureterectomia - retirada do rim e ureter e etc...)
 
 # separar medicamentos por classes (anti-inflamatórios, antibióticos, antivirais, antifúngicos, antiparasitários, antineoplásicos, anticoagulantes, anticonvulsivantes, antipsicóticos, antidepressivos, ansiolíticos) 
