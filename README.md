@@ -9,11 +9,11 @@ Neste projeto, contém:\
 
 Para as anotações, levamos em consideração as seguintes etiquetas:\
     - PROCEDIMENTO\
-    - DOENÇA\
+    - DOENCA\
     - MEDICAMENTO\
     - SINTOMA\
     - ESPECIALIDADE\
-    - REAÇÃO\
-    - DIAGNÓSTICO
+    - REACAO\
+    - DIAGNOSTICO
 
 

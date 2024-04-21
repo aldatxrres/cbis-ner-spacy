@@ -3,17 +3,17 @@ from spacy import displacy
 
 colors = {
     "PROCEDIMENTO": "linear-gradient(90deg, #AA9CFC, #FC9CE7)",
-    "DOENÇA": "linear-gradient(90deg, #FC9C9C, #FCFC9C)", 
+    "DOENCA": "linear-gradient(90deg, #FC9C9C, #FCFC9C)", 
     "MEDICAMENTO": "linear-gradient(90deg, #9CFC9C, #9CFCFC)",
     "SINTOMA": "linear-gradient(90deg, #E0551B, #E0A238)",
     "ESPECIALIDADE": "linear-gradient(90deg, #38E0A2, #6DE0DC)",
-    "REAÇÃO": "linear-gradient(90deg, #E05138, #E0A76E)",
-    "DIAGNÓSTICO": "linear-gradient(90deg, #851BE0, #E0806E)",
+    "REACAO": "linear-gradient(90deg, #E05138, #E0A76E)",
+    "DIAGNOSTICO": "linear-gradient(90deg, #851BE0, #E0806E)",
 }
 
-nlp = spacy.load("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\results")
+nlp = spacy.load("C:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\trained_pipeline")
 
-with open("c:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\Projeto spaCy\\cbis-ner-spacy\\clinical-reports\\cc_037.txt", encoding="utf-8") as file:
+with open("c:\\Users\\aldat\\OneDrive\\Documents\\[TCC] NER\\Projeto spaCy\\cbis-ner-spacy\\clinical-reports\\cc_039.txt", encoding="utf-8") as file:
     texto = file.read()
 
 doc = nlp(texto)
